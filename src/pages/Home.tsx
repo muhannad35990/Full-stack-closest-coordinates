@@ -6,18 +6,20 @@ import { WITHIN_ENDPOINT } from "../config/endpoints";
 const Home = () => {
   const [km, setKm] = useState("");
   const [pointsWithin, setPointsWithin] = useState([]);
+  const [error, setError] = useState(false);
   const getPartnerswithin = (e: any) => {
     e.preventDefault();
-    axios
-      .get(`${WITHIN_ENDPOINT}/${km}`)
-      .then((response: any) => {
-        console.log(response.data.data.pointsWithin);
-
-        setPointsWithin(response.data.data.pointsWithin);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (parseInt(km) && parseInt(km) > 0) {
+      setError(false);
+      axios
+        .get(`${WITHIN_ENDPOINT}/${km}`)
+        .then((response: any) => {
+          setPointsWithin(response.data.data.pointsWithin);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else setError(true);
   };
   return (
     <form method="get" onSubmit={getPartnerswithin}>
@@ -33,7 +35,25 @@ const Home = () => {
           Search
         </StyledButton>
       </StyledInputContainer>
-
+      {error && (
+        <div
+          style={{
+            backgroundColor: "#FFEBE9",
+            border: "1px solid #FFC1C0",
+            marginTop: "1rem",
+          }}
+        >
+          <div
+            style={{
+              color: "#f00",
+              padding: "1rem 0",
+              textAlign: "center",
+            }}
+          >
+            Make sure to input only numbers
+          </div>
+        </div>
+      )}
       <CardsGrid>
         {pointsWithin.map((point: any) => (
           <Card
