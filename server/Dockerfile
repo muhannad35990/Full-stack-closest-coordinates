@@ -1,8 +1,8 @@
 FROM node:14-alpine
-WORKDIR /app
+WORKDIR /server
 COPY package.json .
 COPY tsconfig.json .
 COPY . .
-RUN npm install --silent
+RUN npm install 
 EXPOSE 3002
-CMD ["npm","start"]
+CMD ["npm ","start"]
