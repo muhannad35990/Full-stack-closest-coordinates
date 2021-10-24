@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Card renders without crashing 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div />
+    <h4>
+      <span />
+    </h4>
+    <div
+      style={
+        Object {
+          "padding": "0 1rem",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <styled.h5>
+          <Memo(ForwardRef(LocationOnIcon))
+            style={
+              Object {
+                "color": "#ffb900",
+              }
+            }
+          />
+          <span />
+        </styled.h5>
+        <styled.h5>
+          <Memo(ForwardRef(SettingsRemoteIcon))
+            style={
+              Object {
+                "color": "#ffb900",
+              }
+            }
+          />
+          <h5>
+            NO
+          </h5>
+        </styled.h5>
+      </div>
+      <styled.p />
+    </div>
+  </styled.div>
+  <Styled(styled.div)>
+    <styled.div />
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <styled.button>
+        MORE
+      </styled.button>
+    </div>
+  </Styled(styled.div)>
+</styled.div>
+`;

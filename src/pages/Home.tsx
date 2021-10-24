@@ -27,8 +27,11 @@ const Home = () => {
           placeholder="Search by distance in km"
           onChange={(e) => setKm(e.target.value)}
           value={km}
+          id="SearchInput"
         />
-        <StyledButton type="submit">Search</StyledButton>
+        <StyledButton type="submit" id="searchBtn">
+          Search
+        </StyledButton>
       </StyledInputContainer>
 
       <CardsGrid>
@@ -62,6 +65,7 @@ const StyledButton = styled.button`
     cursor: pointer;
   }
 `;
+
 const StyledInputSearch = styled.input`
   border: 1px solid #2998ff;
   outline: none;

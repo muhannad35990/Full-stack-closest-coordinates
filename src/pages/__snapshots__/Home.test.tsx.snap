@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Home renders without crashing 1`] = `
+<form
+  method="get"
+  onSubmit={[Function]}
+>
+  <styled.div>
+    <styled.input
+      id="SearchInput"
+      onChange={[Function]}
+      placeholder="Search by distance in km"
+      type="text"
+      value=""
+    />
+    <styled.button
+      id="searchBtn"
+      type="submit"
+    >
+      Search
+    </styled.button>
+  </styled.div>
+  <styled.div />
+</form>
+`;
