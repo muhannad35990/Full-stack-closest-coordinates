@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
-import Card from "./Card";
+import Card from "../components/Card";
 
 describe("Card", () => {
   it("Card renders without crashing", () => {

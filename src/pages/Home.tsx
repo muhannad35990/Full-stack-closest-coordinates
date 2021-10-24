@@ -50,7 +50,7 @@ const Home = () => {
               textAlign: "center",
             }}
           >
-            Make sure to input only numbers
+            Invalid input , Please Make sure to input positive numbers
           </div>
         </div>
       )}

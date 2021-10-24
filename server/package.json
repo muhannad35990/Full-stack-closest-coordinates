@@ -2,12 +2,14 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./dist/index.ts",
+    "tsc": "tsc",
+    "build": "tsc -p .",
+    "dev:start": "npm-run-all build start",
     "dev": "nodemon index.ts",
-    "build": "tsc -p ."
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
