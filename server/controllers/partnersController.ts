@@ -1,6 +1,6 @@
 import fs from "fs";
 import arePointsNear from "../utils/arePointsNear";
-
+var _ = require("lodash");
 const getPartnerswithIn = async (req: any, res: any, next: any) => {
   let pointsWithin: any = [];
   if (req.params.distance) {
@@ -30,6 +30,9 @@ const getPartnerswithIn = async (req: any, res: any, next: any) => {
         });
       }
     });
+    var orderdPoints = _.orderBy(pointsWithin, ["organization"], ["asc"]);
+    pointsWithin = orderdPoints;
+
     res.status(200).json({
       status: "success",
       data: { pointsWithin },
