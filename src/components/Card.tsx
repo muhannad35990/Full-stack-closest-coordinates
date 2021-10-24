@@ -140,7 +140,7 @@ const Card: React.FC<ICard> = ({
         text-align: center;
         margin: 0;
         width: 30%;
-        color: #5643fa;
+        color: #eee;
         background-image: linear-gradient(to right bottom, #ff7730, #ffb900);
         font-weight: 700;
         position: absolute;
