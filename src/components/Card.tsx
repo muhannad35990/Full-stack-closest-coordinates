@@ -126,9 +126,9 @@ const Card: React.FC<ICard> = ({
       font-size: 1rem;
       padding: 1rem 0;
       box-shadow: 0 1.5rem 4rem rgba(16, 13, 180, 0.2);
-      background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+
       margin: 0.5rem 0;
-      color: #eee;
+      color: #777;
       &:first-child {
         border-radius: 3rem 3rem 0 0;
         margin: 0;
@@ -152,7 +152,22 @@ const Card: React.FC<ICard> = ({
       }
     }
   `;
-
+  const RoundedButton = styled.button`
+    border: none;
+    outline: none;
+    background-color: #ffb900;
+    color: white;
+    padding: 1rem 4rem;
+    border-radius: 4rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    &:hover {
+      cursor: pointer;
+      background-color: white;
+      color: #ffb900;
+      border: 1px solid #ffb900;
+    }
+  `;
   return (
     <CardContainer>
       <RotatecardSideFront>
@@ -198,20 +213,5 @@ const Card: React.FC<ICard> = ({
     </CardContainer>
   );
 };
-const RoundedButton = styled.button`
-  border: none;
-  outline: none;
-  background-color: #ffb900;
-  color: white;
-  padding: 1rem 4rem;
-  border-radius: 4rem;
-  font-weight: 500;
-  transition: all 0.2s;
-  &:hover {
-    cursor: pointer;
-    background-color: white;
-    color: #ffb900;
-    border: 1px solid #ffb900;
-  }
-`;
+
 export default Card;

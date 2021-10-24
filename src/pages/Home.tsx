@@ -4,7 +4,7 @@ import Card from "../components/Card";
 import styled from "styled-components";
 import { WITHIN_ENDPOINT } from "../config/endpoints";
 const Home = () => {
-  const [km, setKm] = useState("0");
+  const [km, setKm] = useState("");
   const [pointsWithin, setPointsWithin] = useState([]);
   const getPartnerswithin = (e: any) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ const Home = () => {
       <StyledInputContainer>
         <StyledInputSearch
           type="text"
-          placeholder="Type distance in km"
+          placeholder="Search by distance in km"
           onChange={(e) => setKm(e.target.value)}
           value={km}
         />
